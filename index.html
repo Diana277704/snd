@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY LOVE FOR SANAD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>For My Man 💖</h1>
+        <p class="description">
+            Dear Sanad 💌
+        </p>
+            From the moment I met you, my heart knew it had found something truly special. Every day since then, my thoughts have been filled with you, your smile, your eyes, your voice, and the way you make everything around you brighter ☀️
+        </p>
+        ...
+        </p>
+        <div class="buttons">
+            <button class="button" onclick="showLetter(1)">When I First Met You</button>
+            <button class="button" onclick="showLetter(2)">When We're Apart</button>
+            <button class="button" onclick="showLetter(3)">Why I Love You?</button>
+        </div>
+        <!-- Heart GIFs -->
+        <img src="images/heart1.gif" alt="Heart Gif" class="heart-gif heart-top">
+        <img src="images/heart2.gif" alt="Heart Gif" class="heart-gif heart-bottom">
+    </div>
+
+    <!-- Modal untuk surat cinta -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <p>When I first met you, it felt as though the universe had conspired to bring us together at that very moment. Your presence was like a gentle breeze on a warm summer day, comforting, yet exhilarating. Your eyes held the depth of untold stories, and your smile lit up every shadow in my heart. From that instant, I knew you weren’t just another person passing through my life; you were someone I would cherish forever. The way you spoke, the way you laughed, and even the way you simply existed, it all felt like magic, a kind I had only dreamed of experiencing. That day marked the beginning of a story I never want to end, Sanad💓</p>
+            <button class="close-btn" onclick="closeModal(1)">Close</button>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <p>When we were apart, the world felt a little quieter, a little emptier. The laughter that once echoed between us became a distant memory, and the silence grew heavy with longing. I missed you every day, Sanad. The way your presence makes everything feel okay. Though distance may keep us apart, my heart remains tethered to yours, beating to the rhythm of my love for you. I find solace in knowing that the stars above us are the same, and, in some way, they connect us. Every second apart only deepens my appreciation for the moments we share. Until we’re together, I carry you with me in every thought, every breath, and every heartbeat💕</p>
+            <button class="close-btn" onclick="closeModal(2)">Close</button>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <p>I love you because you are everything I have ever wanted. You are the embodiment of my hopes, dreams, and quiet prayers whispered to the stars. Your smile lights up even my darkest days. I love how you listen, not just to my words but to the unspoken emotions I sometimes struggle to express. You make me feel like the luckiest person alive. Loving you feels as natural as breathing, and in you, I have found not just a partner but a home for my heart. You are my everything, and for that, I will love you endlessly💗</p>
+            <button class="close-btn" onclick="closeModal(3)">Close</button>
+        </div>
+    </div>
+
+    <!-- Audio -->
+    <audio id="bg-music" autoplay loop>
+        <source src="audio/background-music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Ikon musik dan Spotify -->
+    <div class="icons">
+        <img src="https://icon-library.com/images/music-icon-png/music-icon-png-5.jpg" alt="Music Icon" class="icon" onclick="toggleMusic()" title="Toggle Music">
+        <a href="https://open.spotify.com/playlist/10Kjj29eXQasnSaB4BMdmN?si=1cbdb045322f48a1" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" alt="Spotify Icon" class="icon" title="Open in Spotify">
+        </a>
+    </div>
+
+    <script>
+        // Function untuk menampilkan modal
+        function showLetter(letterNumber) {
+            document.getElementById('modal' + letterNumber).style.display = 'flex';
+        }
+
+        // Function untuk menutup modal
+        function closeModal(letterNumber) {
+            document.getElementById('modal' + letterNumber).style.display = 'none';
+        }
+
+        // Function untuk toggle musik
+        function toggleMusic() {
+            const audio = document.getElementById("bg-music");
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+    </script>
+</body>
+</html>

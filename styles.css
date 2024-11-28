@@ -1,0 +1,164 @@
+/* Global styling untuk latar belakang penuh */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/background.gif'); /* Gambar background */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+
+/* Container untuk kotak utama */
+.container {
+    background: rgba(192, 239, 255, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+h1 {
+    font-size: 2.8em;
+    color: #5c0f66;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #fefefe;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.button {
+    background-color: #1e6c90;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.1);
+    background-color: #0d37df;
+}
+
+/* Heart GIFs styling */
+.heart-gif {
+    position: absolute;
+    width: 100px; /* Ukuran GIF */
+    height: 100px; /* Ukuran GIF */
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Posisi heart1.gif di pojok kanan atas */
+.heart-top {
+    top: 10px;
+    right: 10px;
+}
+
+/* Posisi heart2.gif di bawah */
+.heart-bottom {
+    bottom: 10px; /* Nilai diperbesar agar lebih ke bawah */
+    left: 55%;
+    transform: translateX(-45%);
+}
+
+/* Modal styling untuk surat cinta */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background-color: #bfd9e5;
+    color: #333;
+    padding: 25px;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    font-size: 1.3em;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.close-btn {
+    background-color: #310858;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.close-btn:hover {
+    background-color: #1c14ff;
+}
+
+/* Ikon untuk musik dan Spotify */
+.icons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon {
+    width: 50px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
